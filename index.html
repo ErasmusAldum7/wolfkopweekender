@@ -191,6 +191,9 @@
         .logoHeader {
             display: flex;
         }
+        .tab {
+        display: flex;
+        }
     </style>
     <script>
         function ready() {
@@ -310,11 +313,12 @@
     <div class="logoHeader">
         <img src="event-header.jpg" alt="Wolfkop Weekender" width="100%" class="logo-white">
     </div>
-
-    <button class="tablink" onclick="openPage('Stage1', this, '#fae234', '#6b679a')" id="defaultOpen">River Stage</button>
-    <button class="tablink" onclick="openPage('Stage2', this, '#fae234', '#508d5e')" >Forest Stage</button>
-    <button class="tablink" onclick="openPage('Stage3', this, '#fae234', '#c38636')"
-    >Beach Boma</button>
+    <div class="tab">
+        <button class="tablink" onclick="openPage('Stage1', this, '#fae234', '#6b679a')" id="defaultOpen">River Stage</button>
+        <button class="tablink" onclick="openPage('Stage2', this, '#fae234', '#508d5e')" >Forest Stage</button>
+        <button class="tablink" onclick="openPage('Stage3', this, '#fae234', '#c38636')" >Beach Boma</button>
+    </div>
+    
 
     <div id="Stage1" class="tabcontent">
         <h1 style="text-align: center;">River Stage</h1>
