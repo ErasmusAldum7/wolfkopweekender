@@ -1,0 +1,608 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- <title>Festival Schedule</title> -->
+    <style>
+        @font-face {
+        font-family: "myfont";
+        src: url("GothamPro-Bold.woff") format('woff');
+        }
+
+        @font-face {
+        font-family: "myfont";
+        src: url("GothamPro-Bold.woff") format('woff');
+        font-weight: bold;
+        }
+
+        @font-face {
+        font-family: "myfont";
+        src: url("GothamPro-BoldItalic.woff") format('woff');
+        font-weight: bold;
+        font-style: italic;
+        }
+
+        @font-face {
+        font-family: "myfont";
+        src: url("GothamPro-MediumItalic.woff") format('woff');
+        font-style: italic;
+        }
+        
+        body,
+        html {
+            font-family: myfont;
+            height: 100%;
+            margin: 0; 
+            letter-spacing: 
+            3px;
+            /* font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif; */
+            /* font-family: 'Courier New', Courier, monospace; */
+            /* font-family : monospace; */
+
+            /* font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif; */
+
+        }
+
+        /* Style tab links */
+        .tablink {
+            background-color: white;
+            color: #fae234;
+            float: left;
+            border: none;
+            outline: none;
+            cursor: pointer;
+            padding: 14px 16px;
+            font-size: 17px;
+            width: 33.3%;
+        }
+
+        .tablink:hover {
+            background-color: #777;
+        }
+
+        /* Style the tab content (and add height:100% for full page content) */
+        .tabcontent {
+            color: white;
+            display: none;
+            padding: 40px 20px;
+            height: 100%;
+        }
+
+        /* Style tab links */
+        .tablink1 {
+            background-color: white;
+            color: #fae234;
+            float: left;
+            border: none;
+            outline: none;
+            cursor: pointer;
+            padding: 14px 16px;
+            font-size: 17px;
+            width: 33.3%;
+        }
+
+        .tablink1:hover {
+            background-color: #777;
+        }
+
+        /* Style the tab content (and add height:100% for full page content) */
+        .tabcontent1 {
+            color: white;
+            display: none;
+            padding: 60px 0px;
+            height: 100%;
+        }
+
+        .tablink2 {
+            background-color: white;
+            color: #fae234;
+            float: left;
+            border: none;
+            outline: none;
+            cursor: pointer;
+            padding: 14px 16px;
+            font-size: 17px;
+            width: 50%;
+        }
+
+        .tabcontent2 {
+            color: white;
+            display: none;
+            padding: 60px 0px;
+            height: 100%;
+        }
+
+        .tablink3 {
+            background-color: white;
+            color: #fae234;
+            float: left;
+            border: none;
+            outline: none;
+            cursor: pointer;
+            padding: 14px 16px;
+            font-size: 17px;
+            width: 33.3%;
+        }
+
+        .tabcontent3 {
+            color: white;
+            display: none;
+            padding: 60px 0px;
+            height: 100%;
+        }
+
+        .wPurple {}
+
+        #Stage1 {
+            background-color: #6d679f;
+        }
+
+        #Stage2 {
+            background-color: #508d5e;
+        }
+
+        #Stage3 {
+            background-color: #c38636;
+        }
+
+        .color1 {
+            color: #6b679a;
+        }
+
+        .color2 {
+            color: #508d5e;
+        }
+
+        .color3 {
+            color: #c38636;
+        }
+
+        .btn {
+            border: none;
+            outline: none;
+            padding: 10px 16px;
+            background-color: #fae234;
+            cursor: pointer;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 10px;
+        }
+
+        th,
+        td {
+            border: 1px solid #ddd;
+            padding: 12px;
+            text-align: left;
+        }
+
+        th {
+            text-align: center;
+        }
+
+        .logoFooter {
+            text-align: center;
+            padding: 30px;
+        }
+        .logoHeader {
+            display: flex;
+        }
+    </style>
+    <script>
+        function ready() {
+        // Get the element with id="defaultOpen" and click on it
+        document.getElementById("defaultOpen").click();
+        document.getElementById("defaultOpen1").click();
+        document.getElementById("defaultOpen2").click();
+        document.getElementById("defaultOpen3").click();
+        }
+
+
+        function openPage(pageName, elmnt, color, color2) {
+            // Hide all elements with class="tabcontent" by default */
+            var i, tabcontent, tablinks;
+            tabcontent = document.getElementsByClassName("tabcontent");
+            for (i = 0; i < tabcontent.length; i++) {
+                tabcontent[i].style.display = "none";
+            }
+
+            // Remove the background color of all tablinks/buttons
+            tablinks = document.getElementsByClassName("tablink");
+            for (i = 0; i < tablinks.length; i++) {
+                tablinks[i].style.backgroundColor = "";
+                tablinks[i].style.color = "";
+            }
+
+            // Show the specific tab content
+            document.getElementById(pageName).style.display = "block";
+
+            // Add the specific color to the button used to open the tab content
+            elmnt.style.backgroundColor = color;
+            elmnt.style.color = color2;
+        }
+
+
+
+        function openPage1(pageName, elmnt, color, color2) {
+            // Hide all elements with class="tabcontent" by default */
+            var i, tabcontent, tablinks;
+            tabcontent = document.getElementsByClassName("tabcontent1");
+            for (i = 0; i < tabcontent.length; i++) {
+                tabcontent[i].style.display = "none";
+            }
+
+            // Remove the background color of all tablinks/buttons
+            tablinks = document.getElementsByClassName("tablink1");
+            for (i = 0; i < tablinks.length; i++) {
+                tablinks[i].style.backgroundColor = "";
+                tablinks[i].style.color = "";
+
+            }
+
+            // Show the specific tab content
+            document.getElementById(pageName).style.display = "block";
+
+            // Add the specific color to the button used to open the tab content
+            elmnt.style.backgroundColor = color;
+            elmnt.style.color = color2;
+
+        }
+
+        function openPage2(pageName, elmnt, color, color2) {
+            // Hide all elements with class="tabcontent" by default */
+            var i, tabcontent, tablinks;
+            tabcontent = document.getElementsByClassName("tabcontent2");
+            for (i = 0; i < tabcontent.length; i++) {
+                tabcontent[i].style.display = "none";
+            }
+
+            // Remove the background color of all tablinks/buttons
+            tablinks = document.getElementsByClassName("tablink2");
+            for (i = 0; i < tablinks.length; i++) {
+                tablinks[i].style.backgroundColor = "";
+                tablinks[i].style.color = "";
+
+            }
+
+            // Show the specific tab content
+            document.getElementById(pageName).style.display = "block";
+
+            // Add the specific color to the button used to open the tab content
+            elmnt.style.backgroundColor = color;
+            elmnt.style.color = color2;
+
+        }
+
+        function openPage3(pageName, elmnt, color, color2) {
+            // Hide all elements with class="tabcontent" by default */
+            var i, tabcontent, tablinks;
+            tabcontent = document.getElementsByClassName("tabcontent3");
+            for (i = 0; i < tabcontent.length; i++) {
+                tabcontent[i].style.display = "none";
+            }
+
+            // Remove the background color of all tablinks/buttons
+            tablinks = document.getElementsByClassName("tablink3");
+            for (i = 0; i < tablinks.length; i++) {
+                tablinks[i].style.backgroundColor = "";
+                tablinks[i].style.color = "";
+
+            }
+
+            // Show the specific tab content
+            document.getElementById(pageName).style.display = "block";
+
+            // Add the specific color to the button used to open the tab content
+            elmnt.style.backgroundColor = color;
+            elmnt.style.color = color2;
+
+        }
+
+    </script>
+</head>
+
+<body>
+    <!-- <h1>Festival Schedule</h1> -->
+    <div class="logoHeader">
+        <img src="event-header.jpg" alt="Wolfkop Weekender" width="100%" class="logo-white">
+    </div>
+
+    <button class="tablink" onclick="openPage('Stage1', this, '#fae234', '#6b679a')" id="defaultOpen">River Stage</button>
+    <button class="tablink" onclick="openPage('Stage2', this, '#fae234', '#508d5e')" >Forest Stage</button>
+    <button class="tablink" onclick="openPage('Stage3', this, '#fae234', '#c38636')"
+    >Beach Boma</button>
+
+    <div id="Stage1" class="tabcontent">
+        <h1 style="text-align: center;">River Stage</h1>
+        <button class="tablink1" onclick="openPage1('FRIDAY', this, '#fae234', '#6b679a')" id="defaultOpen1">FRIDAY</button>
+        <button class="tablink1" onclick="openPage1('SATURDAY', this, '#fae234', '#6b679a')">SATURDAY</button>
+        <button class="tablink1" onclick="openPage1('SUNDAY', this, '#fae234', '#6b679a')">SUNDAY</button>
+
+        <div id="FRIDAY" class="tabcontent1">
+            <table>
+                <tr>
+                    <th colspan="3">FRIDAY</th>
+                </tr>
+                <tr>
+                    <td>17.00</td>
+                    <td colspan="2">YAMZ</td>
+                </tr>
+                <tr>
+                    <td>20.00</td>
+                    <td colspan="2">ANTHEA SCHOLTZ</td>
+                </tr>
+                <tr>
+                    <td>22.00</td>
+                    <td colspan="2">DJ BUHLE</td>
+                </tr>
+                <tr>
+                    <td>00.00</td>
+                    <td colspan="2">FOGSHOW</td>
+                </tr>
+                <tr>
+                    <td>02.00</td>
+                    <td colspan="2">STAGE CLOSES</td>
+                </tr>
+            </table>
+            <div class="logoFooter">
+                <img src="wolfkop-weekender-logo.png" alt="Wolfkop Weekender" width="200" height="60" class="logo-white">
+            </div>
+        </div>
+
+        <div id="SATURDAY" class="tabcontent1">
+            <table>
+                <tr>
+                    <th colspan="3">SATURDAY</th>
+                </tr>
+                <tr>
+                    <td>10.00</td>
+                    <td colspan="2">YOGA</td>
+                </tr>
+                <tr>
+                    <td>11.00</td>
+                    <td colspan="2">ROASTIN' RECORDS</td>
+                </tr>
+                <tr>
+                    <td>13.00</td>
+                    <td colspan="2">TEH SYNES - LIVE</td>
+                </tr>
+                <tr>
+                    <td>14.30</td>
+                    <td colspan="2">MAC MOTEL - LIVE</td>
+                </tr>
+                <tr>
+                    <td>16.00</td>
+                    <td colspan="2">LEEU - LIVE</td>
+                </tr>
+                <tr>
+                    <td>17.30</td>
+                    <td colspan="2">FRIVOLOUS - LIVE</td>
+                </tr>
+                <tr>
+                    <td>19.00</td>
+                    <td colspan="2">SOFT TOUCH OPERATION - LIVE</td>
+                </tr>
+                <tr>
+                    <td>21.00</td>
+                    <td colspan="2">THE DRIFTER</td>
+                </tr>
+                <tr>
+                    <td>00.00</td>
+                    <td colspan="2">KANAN K7</td>
+                </tr>
+                <tr>
+                    <td>02.00</td>
+                    <td colspan="2">FREUDENTHAL</td>
+                </tr>
+                <tr>
+                    <td>04.00</td>
+                    <td colspan="2">STAGE CLOSES</td>
+                </tr>
+            </table>
+            <div class="logoFooter">
+                <img src="wolfkop-weekender-logo.png" alt="Wolfkop Weekender" width="200" height="60" class="logo-white">
+            </div>
+        </div>
+
+        <div id="SUNDAY" class="tabcontent1">
+            <table>
+                <tr>
+                    <th colspan="3">SUNDAY</th>
+                </tr>
+                <tr>
+                    <td>10:00</td>
+                    <td>DASHIKI</td>
+                </tr>
+                <tr>
+                    <td>12.00</td>
+                    <td>BLAGKONGO</td>
+                </tr>
+                <tr>
+                    <td>14.00</td>
+                    <td>BRUNO MORPHET</td>
+                </tr>
+                <tr>
+                    <td>16.00</td>
+                    <td>MIMI LOVE B2B MADMOTORMIQUEL</td>
+                </tr>
+                <tr>
+                    <th colspan="3">AFTERS IN THE BOMA</th>
+                </tr>
+                <tr>
+                    <td>19.00</td>
+                    <td>RICHARD MARSHALL</td>
+                </tr>
+                <tr>
+                    <td>22.00</td>
+                    <td>ANNETT GAPSTREAM</td>
+                </tr>
+                <tr>
+                    <td>00.00</td>
+                    <td>TINTIN</td>
+                </tr>
+                <tr>
+                    <td>03.00</td>
+                    <td>B2B2B</td>
+                </tr>
+            </table>
+            <div class="logoFooter">
+                <img src="wolfkop-weekender-logo.png" alt="Wolfkop Weekender" width="200" height="60" class="logo-white">
+            </div>
+        </div>    
+    </div>
+
+    <div id="Stage2" class="tabcontent">
+        <h1 style="text-align: center;">Forest Stage</h1>
+        <button class="tablink2" onclick="openPage2('SATURDAY2', this, '#fae234', '#508d5e')" id="defaultOpen2">SATURDAY</button>
+        <button class="tablink2" onclick="openPage2('SUNDAY2', this, '#fae234', '#508d5e')">SUNDAY</button>
+
+        <div id="SATURDAY2" class="tabcontent2">
+            <table>
+                <tr>
+                    <th colspan="3">SATURDAY</th>
+                </tr>
+                <tr>
+                    <td>18.00</td>
+                    <td colspan="2">ABBY NUROCK</td>
+                </tr>
+                <tr>
+                    <td>19.30</td>
+                    <td colspan="2">CODY HOFF</td>
+                </tr>
+                <tr>
+                    <td>21.00</td>
+                    <td colspan="2">DEAN FUEL</td>
+                </tr>
+                <tr>
+                    <td>22.30</td>
+                    <td colspan="2">EL GORDO</td>
+                </tr>
+                <tr>
+                    <td>00.00</td>
+                    <td colspan="2">SILENT DISCO</td>
+                </tr>
+                <tr>
+                    <td>02.00</td>
+                    <td colspan="2">STAGE CLOSES</td>
+                </tr>
+            </table>
+            <div class="logoFooter">
+                <img src="wolfkop-weekender-logo.png" alt="Wolfkop Weekender" width="200" height="60" class="logo-white">
+            </div>
+        </div>
+
+        <div id="SUNDAY2" class="tabcontent2">
+            <table>
+                <tr>
+                    <th colspan="3">SUNDAY</th>
+                </tr>
+                <tr>
+                    <td>12.00</td>
+                    <td>FABIO B2B OCD_J</td>
+                </tr>
+                <tr>
+                    <td>16.00</td>
+                    <td>STAGE CLOSES</td>
+                </tr>
+            </table>
+            <div class="logoFooter">
+                <img src="wolfkop-weekender-logo.png" alt="Wolfkop Weekender" width="200" height="60" class="logo-white">
+            </div>
+        </div> 
+    </div>
+
+    <div id="Stage3" class="tabcontent">
+        <h1 style="text-align: center;">Beach Boma</h1>
+        <button class="tablink3" onclick="openPage3('THURSDAY3', this, '#fae234', '#c38636')" id="defaultOpen3">THURSDAY</button>
+        <button class="tablink3" onclick="openPage3('SATURDAY3', this, '#fae234', '#c38636')">SATURDAY</button>
+        <button class="tablink3" onclick="openPage3('SUNDAY3', this, '#fae234', '#c38636')">SUNDAY</button> 
+
+        <div id="THURSDAY3" class="tabcontent3">
+            <table>
+                <tr>
+                    <th colspan="3">THURSDAY</th>
+                </tr>
+                <tr>
+                    <td>18.00</td>
+                    <td colspan="2">PETER A</td>
+                </tr>
+                <tr>
+                    <td>20.30</td>
+                    <td colspan="2">CHARLES WEBSTER</td>
+                </tr>
+                <tr>
+                    <td>23.00</td>
+                    <td colspan="2">GFORCE</td>
+                </tr>
+                <tr>
+                    <td>02.00</td>
+                    <td colspan="2">STAGE CLOSES</td>
+                </tr>
+            </table>
+            <div class="logoFooter">
+                <img src="wolfkop-weekender-logo.png" alt="Wolfkop Weekender" width="200" height="60" class="logo-white">
+            </div>
+        </div>
+
+        <div id="SATURDAY3" class="tabcontent3">
+            <table>
+                <tr>
+                    <th colspan="3">SATURDAY</th>
+                </tr>
+                <tr>
+                    <td>10.30</td>
+                    <td colspan="2">VALVE STATE</td>
+                </tr>
+                <tr>
+                    <td>12.30</td>
+                    <td colspan="2">PURPLE FLOYD</td>
+                </tr>
+                <tr>
+                    <td>14.30</td>
+                    <td colspan="2">FAFFA BRUWER B2B LOS JETSONS</td>
+                </tr>
+                <tr>
+                    <td>17.30</td>
+                    <td colspan="2">STAGE CLOSES</td>
+                </tr>
+            </table>
+            <div class="logoFooter">
+                <img src="wolfkop-weekender-logo.png" alt="Wolfkop Weekender" width="200" height="60" class="logo-white">
+            </div>
+        </div>
+
+        <div id="SUNDAY3" class="tabcontent3">
+            <table>
+                <tr>
+                    <th colspan="3">SUNDAY</th>
+                </tr>
+                <tr>
+                    <td>09.00</td>
+                    <td>SHURA</td>
+                </tr>
+                <tr>
+                    <td>11.00</td>
+                    <td>ROZ</td>
+                </tr>
+                <tr>
+                    <td>14.00</td>
+                    <td>STAGE CLOSES</td>
+                </tr>
+            </table>
+            <div class="logoFooter">
+                <img src="wolfkop-weekender-logo.png" alt="Wolfkop Weekender" width="200" height="60" class="logo-white">
+            </div>
+        </div>
+    </div>
+    <script>
+        (function () {
+            ready();
+        })();
+    </script>
+</body>
+
+</html>
