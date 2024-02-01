@@ -48,14 +48,14 @@
         /* Style tab links */
         .tablink {
             background-color: white;
-            color: #fae234;
+            color: #ff353b;
             float: left;
             border: none;
             outline: none;
             cursor: pointer;
             padding: 14px 16px;
             font-size: 17px;
-            width: 33.3%;
+            width: 50%;
         }
 
         .tablink:hover {
@@ -73,7 +73,7 @@
         /* Style tab links */
         .tablink1 {
             background-color: white;
-            color: #fae234;
+            color: #ff353b;
             float: left;
             border: none;
             outline: none;
@@ -97,14 +97,14 @@
 
         .tablink2 {
             background-color: white;
-            color: #fae234;
+            color: #ff353b;
             float: left;
             border: none;
             outline: none;
             cursor: pointer;
             padding: 14px 16px;
             font-size: 17px;
-            width: 50%;
+            width: 33.3%;
         }
 
         .tabcontent2 {
@@ -116,7 +116,7 @@
 
         .tablink3 {
             background-color: white;
-            color: #fae234;
+            color: #ff353b;
             float: left;
             border: none;
             outline: none;
@@ -136,11 +136,13 @@
         .wPurple {}
 
         #Stage1 {
-            background-color: #6d679f;
+            /* background-color: #6d679f; */
+            background-image: linear-gradient(#bb30fd, #8593ff);
         }
 
         #Stage2 {
-            background-color: #508d5e;
+            /* background-color: #508d5e; */
+            background-image: linear-gradient(#8593ff, #bb30fd);
         }
 
         #Stage3 {
@@ -314,17 +316,16 @@
         <img src="event-header.jpg" alt="Wolfkop Weekender" width="100%" class="logo-white">
     </div>
     <div class="tab">
-        <button class="tablink" onclick="openPage('Stage1', this, '#fae234', '#6b679a')" id="defaultOpen">River Stage</button>
-        <button class="tablink" onclick="openPage('Stage2', this, '#fae234', '#508d5e')" >Forest Stage</button>
-        <button class="tablink" onclick="openPage('Stage3', this, '#fae234', '#c38636')" >Beach Boma</button>
+        <button class="tablink" onclick="openPage('Stage1', this, '#ff353b', '#fff')" id="defaultOpen">Lake Stage</button>
+        <button class="tablink" onclick="openPage('Stage2', this, '#ff353b', '#fff')" >Beach Stage</button>
     </div>
     
 
     <div id="Stage1" class="tabcontent">
-        <h1 style="text-align: center;">River Stage</h1>
-        <button class="tablink1" onclick="openPage1('FRIDAY', this, '#fae234', '#6b679a')" id="defaultOpen1">FRIDAY</button>
-        <button class="tablink1" onclick="openPage1('SATURDAY', this, '#fae234', '#6b679a')">SATURDAY</button>
-        <button class="tablink1" onclick="openPage1('SUNDAY', this, '#fae234', '#6b679a')">SUNDAY</button>
+        <h1 style="text-align: center;">Lake Stage</h1>
+        <button class="tablink1" onclick="openPage1('FRIDAY', this, '#ff353b', '#fff')" id="defaultOpen1">FRIDAY</button>
+        <button class="tablink1" onclick="openPage1('SATURDAY', this, '#ff353b', '#fff')">SATURDAY</button>
+        <!-- <button class="tablink1" onclick="openPage1('SUNDAY', this, '#ff353b', '#fff')">SUNDAY</button> -->
 
         <div id="FRIDAY" class="tabcontent1">
             <table>
@@ -332,28 +333,34 @@
                     <th colspan="3">FRIDAY</th>
                 </tr>
                 <tr>
-                    <td>17.00</td>
-                    <td colspan="2">YAMZ</td>
+                    <td>18.00</td>
+                    <td colspan="2">TERRASOUL</td>
                 </tr>
                 <tr>
                     <td>20.00</td>
-                    <td colspan="2">ANTHEA SCHOLTZ</td>
+                    <td colspan="2">JUHA</td>
                 </tr>
                 <tr>
-                    <td>22.00</td>
-                    <td colspan="2">DJ BUHLE</td>
+                    <td>21.30</td>
+                    <td colspan="2">LADY M</td>
                 </tr>
                 <tr>
-                    <td>00.00</td>
-                    <td colspan="2">FOGSHOW</td>
+                    <td>23.00</td>
+                    <td colspan="2">ZAZOO</td>
                 </tr>
                 <tr>
-                    <td>02.00</td>
+                    <td>01.00</td>
+                    <td colspan="2">KOZY (CANADA)</td>
+                </tr>
+                <tr>
+                    <td>03.00</td>
                     <td colspan="2">STAGE CLOSES</td>
                 </tr>
             </table>
             <div class="logoFooter">
-                <img src="wolfkop-weekender-logo.png" alt="Wolfkop Weekender" width="200" height="60" class="logo-white">
+                <h1 style="text-align: center; margin-bottom: 0;">WITH YOU</h1>
+                <h3 style="text-align: center; margin-top: 0;">FESTIVAL</h3>
+                <h2 style="text-align: center;">RUMOURS by the LAKE</h2>
             </div>
         </div>
 
@@ -363,47 +370,39 @@
                     <th colspan="3">SATURDAY</th>
                 </tr>
                 <tr>
-                    <td>10.00</td>
-                    <td colspan="2">YOGA</td>
-                </tr>
-                <tr>
-                    <td>11.00</td>
-                    <td colspan="2">ROASTIN' RECORDS</td>
-                </tr>
-                <tr>
-                    <td>13.00</td>
-                    <td colspan="2">TEH SYNES - LIVE</td>
-                </tr>
-                <tr>
-                    <td>14.30</td>
-                    <td colspan="2">MAC MOTEL - LIVE</td>
-                </tr>
-                <tr>
-                    <td>16.00</td>
-                    <td colspan="2">LEEU - LIVE</td>
-                </tr>
-                <tr>
-                    <td>17.30</td>
-                    <td colspan="2">FRIVOLOUS - LIVE</td>
+                    <td>17.00</td>
+                    <td colspan="2">DYLAN MUNRO</td>
                 </tr>
                 <tr>
                     <td>19.00</td>
-                    <td colspan="2">SOFT TOUCH OPERATION - LIVE</td>
+                    <td colspan="2">ROBBIE DINNIE</td>
                 </tr>
                 <tr>
                     <td>21.00</td>
-                    <td colspan="2">THE DRIFTER</td>
+                    <td colspan="2">SARA LOVE</td>
+                </tr>
+                <tr>
+                    <td>22.30</td>
+                    <td colspan="2">MAXIMILIAN</td>
                 </tr>
                 <tr>
                     <td>00.00</td>
-                    <td colspan="2">KANAN K7</td>
+                    <td colspan="2">ROMAN ADAM</td>
                 </tr>
                 <tr>
                     <td>02.00</td>
-                    <td colspan="2">FREUDENTHAL</td>
+                    <td colspan="2">IVAN TURANJANIN</td>
                 </tr>
                 <tr>
-                    <td>04.00</td>
+                    <td>03.30</td>
+                    <td colspan="2">DEANO</td>
+                </tr>
+                <tr>
+                    <td>05.00</td>
+                    <td colspan="2">CODY MEYER</td>
+                </tr>                
+                <tr>
+                    <td>08.00</td>
                     <td colspan="2">STAGE CLOSES</td>
                 </tr>
             </table>
@@ -412,7 +411,7 @@
             </div>
         </div>
 
-        <div id="SUNDAY" class="tabcontent1">
+        <!-- <div id="SUNDAY" class="tabcontent1">
             <table>
                 <tr>
                     <th colspan="3">SUNDAY</th>
@@ -456,41 +455,42 @@
             <div class="logoFooter">
                 <img src="wolfkop-weekender-logo.png" alt="Wolfkop Weekender" width="200" height="60" class="logo-white">
             </div>
-        </div>    
+        </div>     -->
     </div>
 
     <div id="Stage2" class="tabcontent">
-        <h1 style="text-align: center;">Forest Stage</h1>
-        <button class="tablink2" onclick="openPage2('SATURDAY2', this, '#fae234', '#508d5e')" id="defaultOpen2">SATURDAY</button>
-        <button class="tablink2" onclick="openPage2('SUNDAY2', this, '#fae234', '#508d5e')">SUNDAY</button>
+        <h1 style="text-align: center;">Beach Stage</h1>
+        <button class="tablink2" onclick="openPage2('FRIDAY2', this, '#ff353b', '#fff')" id="defaultOpen2">FRIDAY</button>
+        <button class="tablink2" onclick="openPage2('SATURDAY2', this, '#ff353b', '#fff')" id="defaultOpen2">SATURDAY</button>
+        <!-- <button class="tablink2" onclick="openPage2('SUNDAY2', this, '#ff353b', '#fff')">SUNDAY</button> -->
 
-        <div id="SATURDAY2" class="tabcontent2">
+        <div id="FRIDAY2" class="tabcontent2">
             <table>
                 <tr>
-                    <th colspan="3">SATURDAY</th>
+                    <th colspan="3">FRIDAY</th>
                 </tr>
                 <tr>
-                    <td>18.00</td>
-                    <td colspan="2">ABBY NUROCK</td>
+                    <td>14.00</td>
+                    <td colspan="2">THAMIACHE</td>
                 </tr>
                 <tr>
-                    <td>19.30</td>
-                    <td colspan="2">CODY HOFF</td>
+                    <td>15.30</td>
+                    <td colspan="2">FILTHI FUSION</td>
                 </tr>
                 <tr>
-                    <td>21.00</td>
-                    <td colspan="2">DEAN FUEL</td>
+                    <td>17.00</td>
+                    <td colspan="2">CTERO</td>
                 </tr>
                 <tr>
-                    <td>22.30</td>
-                    <td colspan="2">EL GORDO</td>
+                    <td>18.30</td>
+                    <td colspan="2">PULP FRICTION</td>
                 </tr>
                 <tr>
-                    <td>00.00</td>
-                    <td colspan="2">SILENT DISCO</td>
+                    <td>20.00</td>
+                    <td colspan="2">SARO x DARYN STEYTLER</td>
                 </tr>
                 <tr>
-                    <td>02.00</td>
+                    <td>22.00</td>
                     <td colspan="2">STAGE CLOSES</td>
                 </tr>
             </table>
@@ -499,7 +499,50 @@
             </div>
         </div>
 
-        <div id="SUNDAY2" class="tabcontent2">
+        <div id="SATURDAY2" class="tabcontent2">
+            <table>
+                <tr>
+                    <th colspan="3">SATURDAY</th>
+                </tr>
+                <tr>
+                    <td>08.30</td>
+                    <td colspan="2">WILL KILL</td>
+                </tr>
+                <tr>
+                    <td>10.00</td>
+                    <td colspan="2">KIX</td>
+                </tr>
+                <tr>
+                    <td>11.30</td>
+                    <td colspan="2">ARTHUR</td>
+                </tr>
+                <tr>
+                    <td>13.00</td>
+                    <td colspan="2">NOW NOW</td>
+                </tr>
+                <tr>
+                    <td>14.30</td>
+                    <td colspan="2">PURPLE FLOYD</td>
+                </tr>
+                <tr>
+                    <td>16.00</td>
+                    <td colspan="2">CHRIS LUNO</td>
+                </tr>
+                <tr>
+                    <td>18.00</td>
+                    <td colspan="2">JUST FINN</td>
+                </tr>
+                <tr>
+                    <td>20.00</td>
+                    <td colspan="2">STAGE CLOSES</td>
+                </tr>
+            </table>
+            <div class="logoFooter">
+                <img src="wolfkop-weekender-logo.png" alt="Wolfkop Weekender" width="200" height="60" class="logo-white">
+            </div>
+        </div>
+
+        <!-- <div id="SUNDAY2" class="tabcontent2">
             <table>
                 <tr>
                     <th colspan="3">SUNDAY</th>
@@ -516,10 +559,10 @@
             <div class="logoFooter">
                 <img src="wolfkop-weekender-logo.png" alt="Wolfkop Weekender" width="200" height="60" class="logo-white">
             </div>
-        </div> 
+        </div>  -->
     </div>
 
-    <div id="Stage3" class="tabcontent">
+    <!-- <div id="Stage3" class="tabcontent">
         <h1 style="text-align: center;">Beach Boma</h1>
         <button class="tablink3" onclick="openPage3('THURSDAY3', this, '#fae234', '#c38636')" id="defaultOpen3">THURSDAY</button>
         <button class="tablink3" onclick="openPage3('SATURDAY3', this, '#fae234', '#c38636')">SATURDAY</button>
@@ -601,7 +644,7 @@
                 <img src="wolfkop-weekender-logo.png" alt="Wolfkop Weekender" width="200" height="60" class="logo-white">
             </div>
         </div>
-    </div>
+    </div> -->
     <script>
         (function () {
             ready();
